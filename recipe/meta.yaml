@@ -1,7 +1,7 @@
 {% set name = "hdijupyterutils" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.6" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "26cdd497aaf2cfe5fad807090ddade6da90d761ef1e8352b5c5890ad9d38162c" %}
+{% set hash_val = "e7eb5dc1c615bed862066cfd4d365a73bc64f9c2c0356e2075f4f37ac7735ccd" %}
 
 package:
     name: {{ name }}
@@ -14,7 +14,7 @@ source:
 
 build:
     noarch: python
-    number: 1
+    number: 0
     script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
