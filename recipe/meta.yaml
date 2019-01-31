@@ -1,7 +1,7 @@
 {% set name = "hdijupyterutils" %}
-{% set version = "0.12.6" %}
+{% set version = "0.12.7" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "e7eb5dc1c615bed862066cfd4d365a73bc64f9c2c0356e2075f4f37ac7735ccd" %}
+{% set hash_val = "b630e91e9edede21465a70dc24e0bfbeecfbe2f2e090a5c5fc69aff7f18efc67" %}
 
 package:
     name: {{ name }}
