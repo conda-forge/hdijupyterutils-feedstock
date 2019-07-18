@@ -1,7 +1,7 @@
 {% set name = "hdijupyterutils" %}
 {% set version = "0.12.8" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "f5166026a222d38eb6c3b6c2100bcea8e68d02fb46afec8fc726aab8637b6ee7" %}
+{% set hash_val = "1f69766c86b4501b47abe67494a5f5001a466c7d6d5f56cf664e776bbe8c2dae" %}
 
 package:
     name: {{ name }}
@@ -9,13 +9,13 @@ package:
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    url: https://github.com/jupyter-incubator/sparkmagic/archive/{{ version }}.tar.gz
     {{ hash_type }}: {{ hash_val }}
 
 build:
     noarch: python
     number: 0
-    script: python -m pip install --no-deps --ignore-installed .
+    script: cd {{ name }} && python -m pip install --no-deps --ignore-installed .
 
 requirements:
     build:
@@ -38,6 +38,7 @@ about:
     home: https://github.com/jupyter-incubator/sparkmagic/tree/master/hdijupyterutils
     license: BSD 3-clause
     summary: Project with useful classes/methods for all projects created by the HDInsight team at Microsoft around Jupyter
+    license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
