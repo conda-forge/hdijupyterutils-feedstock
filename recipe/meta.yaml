@@ -1,49 +1,50 @@
 {% set name = "hdijupyterutils" %}
-{% set version = "0.12.9" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "2946b7199e5c4d8e6b4a48d6d8f5505f1348ea2189be4a3fdb539073a7f15691" %}
+{% set version = "0.17.0" %}
+
 
 package:
-    name: {{ name }}
-    version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://github.com/jupyter-incubator/sparkmagic/archive/{{ version }}.tar.gz
-    {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hdijupyterutils-{{ version }}.tar.gz
+  sha256: 22458763df4e2023ea916bb486a50e8c58ba6e46a0740094f10dac79c8ae4c84
 
 build:
-    noarch: python
-    number: 0
-    script: cd {{ name }} && python -m pip install --no-deps --ignore-installed .
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-    build:
-        - python
-        - pip
-    run:
-        - python
-        - ipython >=4.0.2
-        - nose
-        - mock
-        - ipywidgets >=5.0.0
-        - ipykernel >=4.2.2
-        - jupyter >=1
-        - pandas >=0.17.1
-        - numpy
-        - notebook >=4.2
-
+  host:
+    - pip
+    - python
+  run:
+    - ipykernel >=4.2.2
+    - ipython >=4.0.2
+    - ipywidgets >5.0.0
+    - jupyter >=1
+    - mock
+    - nose
+    - notebook >=4.2
+    - numpy
+    - pandas >=0.17.1
+    - python >=3.6
 
 test:
-    imports:
-        - hdijupyterutils
+  imports:
+    - hdijupyterutils
+  commands:
+    - pip check || true
+  requires:
+    - pip
 
 about:
-    home: https://github.com/jupyter-incubator/sparkmagic/tree/master/hdijupyterutils
-    license: BSD 3-clause
-    summary: Project with useful classes/methods for all projects created by the HDInsight team at Microsoft around Jupyter
-    license_file: LICENSE.md
+  home: https://github.com/jupyter-incubator/sparkmagic/hdijupyterutils
+  summary: 'HdiJupyterUtils: Utils for Jupyter projects from HDInsight team'
+  license: BSD-3-Clause
+  license_file: LICENSE.md
 
 extra:
   recipe-maintainers:
-    - ""
+    - dbast
