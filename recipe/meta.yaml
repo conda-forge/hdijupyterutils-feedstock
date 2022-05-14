@@ -1,5 +1,5 @@
 {% set name = "hdijupyterutils" %}
-{% set version = "0.19.2" %}
+{% set version = "0.20.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/hdijupyterutils-{{ version }}.tar.gz
-  sha256: 575a6d650b03bf168bfdfe9d0697f83619e56d25407c35a33138b0374afc8f5d
+  sha256: 8785d4d89bced6b49347957af67c46814b096cb3d2d6f8effaf95a8e3f485d8c
 
 build:
   number: 0
