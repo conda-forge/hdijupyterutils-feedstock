@@ -1,11 +1,11 @@
-About hdijupyterutils
-=====================
+About hdijupyterutils-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hdijupyterutils-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyter-incubator/sparkmagic/hdijupyterutils
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hdijupyterutils-feedstock/blob/main/LICENSE.txt)
 
 Summary: HdiJupyterUtils: Utils for Jupyter projects from HDInsight team
 
